@@ -1,0 +1,215 @@
+ <!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!--Author: Net Support Team-->
+<!--Project Name: Paymentmanagement - Explore More-->
+<!--Module Name: Payment -->
+
+<struts-config>
+
+	<!-- ============ Form Bean Definitions ============ -->
+	<!-- =============================================== -->
+	<form-beans>
+							<!--| ====================================================== | -->
+							<!--|        Paymentmanagement Form Beans  Start		| -->
+							<!--| ====================================================== | -->
+
+	    <form-bean name="operatingLimitSetUpForm" type="com.ibank.ibanking.businessadministration.formbean.OperatingLimitSetUpForm"/>		
+		<form-bean name="topUpCommissionDisbursementProcessForm" type="com.adminpanel.merchantadminpanel.businessadministration.formbean.TopUpCommissionDisbursementProcessForm"/>
+		<form-bean name="individualOperatingLimitSetUpForm" type="com.ibank.ibanking.businessadministration.formbean.IndividualOperatingLimitSetUpForm"/>
+	
+
+	       
+	</form-beans>
+
+	<!-- ============ Action Mapping Definitions ============ -->
+	<!-- ==================================================== -->
+    <action-mappings>
+	
+	<!--Talk Time Commission Disbursement Start-->
+	<!--=======================================-->
+	
+	 <action path="/topUpCommissionDisbursementProcess"
+        type="com.adminpanel.merchantadminpanel.businessadministration.action.TopUpCommissionDisbursementProcessAction"
+        name="topUpCommissionDisbursementProcessForm"
+        validate="false"
+        input="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+    	 <action path="/getTopUpCommissionDisbursementProcessInformation"
+        type="com.adminpanel.merchantadminpanel.businessadministration.action.TopUpCommissionDisbursementProcessAction"
+        name="topUpCommissionDisbursementProcessForm"
+        validate="false"
+        input="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+     <action path="/executeTopUpCommissionDisbursementProcess"
+        type="com.adminpanel.merchantadminpanel.businessadministration.action.TopUpCommissionDisbursementProcessAction"
+        name="topUpCommissionDisbursementProcessForm"
+        validate="false"
+        input="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+
+ <action path="/topUpCommissionDetailsReport"
+        type="com.adminpanel.merchantadminpanel.businessadministration.action.TopUpCommissionDisbursementProcessAction"
+        name="topUpCommissionDisbursementProcessForm"
+        validate="false"
+        input="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+    
+    <action path="/cancelTopUpCommissionDisbursementProcess"
+        type="com.adminpanel.merchantadminpanel.businessadministration.action.TopUpCommissionDisbursementProcessAction"
+        name="topUpCommissionDisbursementProcessForm"
+        validate="false"
+        input="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp">
+        <forward name="success" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/businessadministration/TopUpCommissionDisbursementProcess.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+		
+
+
+	
+	<!-- Operating Limit Set Up Start -->
+	<!-- ======================== -->
+	
+	<action path="/operatingLimitSetUp"
+        type="com.ibank.ibanking.businessadministration.action.OperatingLimitSetUpAction"
+        name="operatingLimitSetUpForm"
+        validate="false"
+        input="/pages/ibanking/businessadministration/OperatingLimitSetUp.jsp">
+        <forward name="success" path="/pages/ibanking/businessadministration/OperatingLimitSetUp.jsp"/>
+        <forward name="failure" path="/pages/ibanking/businessadministration/OperatingLimitSetUp.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/showDataOperatingLimitSetUp"
+        type="com.ibank.ibanking.businessadministration.action.OperatingLimitSetUpAction"
+        name="operatingLimitSetUpForm"
+        validate="false"
+        input="/pages/ibanking/businessadministration/OperatingLimitSetUp.jsp">
+        <forward name="success" path="/pages/ibanking/businessadministration/OperatingLimitSetUp.jsp"/>
+        <forward name="failure" path="/pages/ibanking/businessadministration/OperatingLimitSetUp.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/executeOperatingLimitSetUp"
+        type="com.ibank.ibanking.businessadministration.action.OperatingLimitSetUpAction"
+        name="operatingLimitSetUpForm"
+        validate="false"
+        input="/pages/ibanking/businessadministration/OperatingLimitSetUp.jsp">
+        <forward name="success" path="/pages/ibanking/businessadministration/OperatingLimitSetUp.jsp"/>
+        <forward name="failure" path="/pages/ibanking/businessadministration/OperatingLimitSetUp.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	
+	
+	<action path="/cancelOperatingLimitSetUp"
+        type="com.ibank.ibanking.businessadministration.action.OperatingLimitSetUpAction"
+        name="operatingLimitSetUpForm"
+        validate="false"
+        input="/pages/ibanking/businessadministration/OperatingLimitSetUp.jsp">
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/businessadministration/OperatingLimitSetUp.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>	
+	
+
+		<!-- Operating Limit Set Up End -->
+	<!-- ========================== -->
+	
+	
+	
+	
+	
+	<!--Individual Operating Limit Set Up Start -->
+	<!-- ======================== -->
+	
+	<action path="/individualOperatingLimitSetUp"
+        type="com.ibank.ibanking.businessadministration.action.IndividualOperatingLimitSetUpAction"
+        name="individualOperatingLimitSetUpForm"
+        validate="false"
+        input="/pages/ibanking/businessadministration/IndividualOperatingLimitSetUp.jsp">
+        <forward name="success" path="/pages/ibanking/businessadministration/IndividualOperatingLimitSetUp.jsp"/>
+        <forward name="failure" path="/pages/ibanking/businessadministration/IndividualOperatingLimitSetUp.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/indShowDataOperatingLimitSetUp"
+        type="com.ibank.ibanking.businessadministration.action.IndividualOperatingLimitSetUpAction"
+        name="individualOperatingLimitSetUpForm"
+        validate="false"
+        input="/pages/ibanking/businessadministration/IndividualOperatingLimitSetUp.jsp">
+        <forward name="success" path="/pages/ibanking/businessadministration/IndividualOperatingLimitSetUp.jsp"/>
+        <forward name="failure" path="/pages/ibanking/businessadministration/IndividualOperatingLimitSetUp.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/indExecuteOperatingLimitSetUp"
+        type="com.ibank.ibanking.businessadministration.action.IndividualOperatingLimitSetUpAction"
+        name="individualOperatingLimitSetUpForm"
+        validate="false"
+        input="/pages/ibanking/businessadministration/IndividualOperatingLimitSetUp.jsp">
+        <forward name="success" path="/pages/ibanking/businessadministration/IndividualOperatingLimitSetUp.jsp"/>
+        <forward name="failure" path="/pages/ibanking/businessadministration/IndividualOperatingLimitSetUp.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	
+	
+	<action path="/indCancelOperatingLimitSetUp"
+        type="com.ibank.ibanking.businessadministration.action.IndividualOperatingLimitSetUpAction"
+        name="individualOperatingLimitSetUpForm"
+        validate="false"
+        input="/pages/ibanking/businessadministration/IndividualOperatingLimitSetUp.jsp">
+		<forward name="success" path="/pages/menu/IBankingMenu.jsp"/>
+        <forward name="failure" path="/pages/ibanking/businessadministration/IndividualOperatingLimitSetUp.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/IBankingMenu.do"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>	
+	
+
+		<!--Individual Operating Limit Set Up End -->
+	<!-- ========================== -->
+	
+		
+	</action-mappings>
+	
+</struts-config>
